@@ -32,6 +32,10 @@ describe 'converting an Arabic number to a Roman numeral' do
       expect(convert_to_roman(999)).to eq "DCCCCLXXXXVIIII"
     end
 
+    it 'converts 2569 to MMDLXVIIII' do
+      expect(convert_to_roman(2569)).to eq "MMDLXVIIII"
+    end
+
   end
 
   describe 'modern Roman numerals' do
