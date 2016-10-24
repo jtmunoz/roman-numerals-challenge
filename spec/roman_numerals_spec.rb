@@ -12,6 +12,7 @@ describe 'converting an Arabic number to a Roman numeral' do
 
     # Release 1 ...
     # add tests for old roman numerals here
+
     it 'converts 5 to V' do
       expect(convert_to_roman(5)).to eq "V"
     end
@@ -41,6 +42,21 @@ describe 'converting an Arabic number to a Roman numeral' do
   describe 'modern Roman numerals' do
     # Release 3 ...
     # add tests for modern roman numerals here
+    it 'converts 4 to IV' do
+      expect(convert_to_roman(4,{modern: true})).to eq "IV"
+    end
+
+    it 'converts 9 to IX' do
+      expect(convert_to_roman(9,{modern: true})).to eq "IX"
+    end
+
+    it 'converts 44 to XLIV' do
+      expect(convert_to_roman(44,{modern: true})).to eq "XLIV"
+    end
+
+    it 'converts 944 to CMXLIV' do
+      expect(convert_to_roman(944,{modern: true})).to eq "CMXLIV"
+    end
 
   end
 end
