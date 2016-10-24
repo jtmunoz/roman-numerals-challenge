@@ -29,6 +29,15 @@ describe 'converting an Arabic number to a Roman numeral' do
   describe 'modern Roman numerals' do
     # Release 3 ...
     # add tests for modern roman numerals here
+      it 'converts 1 to I' do
+    expect(convert_to_roman(1, { modern: true })).to eq "I"
+      end
+
+      it 'converts 444 to CDXLIV' do
+        expect(convert_to_roman(444, {modern: true})).to eq "CDXLIV"
+      end
+
+
 
   end
 end
