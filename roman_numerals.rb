@@ -4,18 +4,33 @@ puts "Pick a number to convert:"
 def convert_to_roman(arabic_number)
   # Your code goes here
   roman_number = ""
-  # 	if arabic_number < 5
-	 # 	 arabic_number.times do
-	 #  		roman_number << "I"
-  # 		end
-  # 	elsif arabic_number >= 5 && arabic_number < 10
-  # 		roman_number << "V"
-  # 		# arabic_number = arabic_number % 9
-  # 		(arabic_number % 5).times do
-	 #  		roman_number << "I"
-		# end
-	# if arabic_number <= 49
-		tens = arabic_number / 10 
+
+  		remainder = arabic_number % 1000
+  		one_thousand = remainder / 1000
+  		one_thousand.times do
+  			roman_number << "M"
+		end
+
+  		remainder = arabic_number % 1000
+  		five_hundred = remainder / 500
+  		five_hundred.times do
+  			roman_number << "D"
+		end
+
+  		remainder = arabic_number % 500
+  		one_hundred = remainder / 100
+  		one_hundred.times do
+  			roman_number << "C"
+		end
+
+  		remainder = arabic_number % 100
+  		fifty = remainder / 50
+  		fifty.times do
+  			roman_number << "L"
+		end
+
+  		remainder = arabic_number % 50		
+		tens = remainder / 10 
 		tens.times do
 			roman_number << "X"
 		end
