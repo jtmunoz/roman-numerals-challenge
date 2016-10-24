@@ -44,7 +44,6 @@ describe 'converting an Arabic number to a Roman numeral' do
       expect(convert_to_roman(500)).to eq "D"
     end
 
-
     it 'converts 499 to CCCCLXXXXVIIII' do
       expect(convert_to_roman(499)).to eq "CCCCLXXXXVIIII"
     end
