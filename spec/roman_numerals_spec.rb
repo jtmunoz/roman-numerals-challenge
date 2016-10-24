@@ -12,7 +12,18 @@ describe 'converting an Arabic number to a Roman numeral' do
 
     # Release 1 ...
     # add tests for old roman numerals here
+    it 'converts 5 to v' do
+      expect(convert_to_roman(5)).to eq "v"
+    end
 
+    it 'converts 6 to VI' do
+      expect(convert_to_roman(6)).to eq "VI"
+    end
+
+    it 'converts 10 to X' do
+      expect(convert_to_roman(10)).to eq "X"
+    end
+    
   end
 
   describe 'modern Roman numerals' do
