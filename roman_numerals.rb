@@ -53,6 +53,39 @@ def convert_to_roman(arabic_number)
         arabic_number = arabic_number - 50
         result +=  hash_number["50"]
       end
+
+    elsif arabic_number == 100
+      arabic_number = arabic_number - 100
+      result += hash_number["100"]
+    elsif arabic_number > 100 && arabic_number < 500
+      multiplier = arabic_number / 100
+
+      multiplier.times do |x|
+        arabic_number = arabic_number - 100
+        result +=  hash_number["100"]
+      end
+
+    elsif arabic_number == 500
+      arabic_number = arabic_number - 500
+      result += hash_number["500"]
+    elsif arabic_number > 500 && arabic_number < 1000
+      multiplier = arabic_number / 500
+
+      multiplier.times do |x|
+        arabic_number = arabic_number - 500
+        result +=  hash_number["500"]
+      end
+
+    elsif arabic_number == 1000
+        arabic_number = arabic_number - 1000
+        result += hash_number["1000"]
+    elsif arabic_number > 1000 && arabic_number <= 3000
+      multiplier = arabic_number / 1000
+
+      multiplier.times do |x|
+        arabic_number = arabic_number - 1000
+        result +=  hash_number["1000"]
+      end
     else
     end
   end
