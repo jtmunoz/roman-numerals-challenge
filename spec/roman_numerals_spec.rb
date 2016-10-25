@@ -55,6 +55,21 @@ describe 'converting an Arabic number to a Roman numeral' do
   describe 'modern Roman numerals' do
     # Release 3 ...
     # add tests for modern roman numerals here
+     it 'converts 4 to IV' do
+      expect(convert_to_roman(4,{modern:true})).to eq "IV"
+    end
 
+    it 'converts 44 to XLIV' do
+      expect(convert_to_roman(44,{modern:true})).to eq "XLIV"
   end
+
+  it 'converts 900 to CM' do
+      expect(convert_to_roman(900,{modern:true})).to eq "CM"
+  end
+
+  it 'converts 92 to XCII' do
+      expect(convert_to_roman(92,{modern:true})).to eq "XCII"
+  end
+
+end
 end
